@@ -1,0 +1,7 @@
+
+
+linkedListNode = (list) => {
+  
+
+
+};
