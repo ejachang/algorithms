@@ -8,9 +8,21 @@
 /**
  * @param {TreeNode} root
  * @return {number[]}
+ * 
+ * Order of traversing: current node, the left node, then right node
+ * 
+ * If the node is empty return to the previous node
+ * If the node is not empty, get the value of the current node, 
+ *  repeat preorder in the left,
+ *  and then repeat in the right
+ * 
+ * Pseudocode:
+ * if node === null return
+ * if node !== null
+ *  node.left
+ *  node.right
+ * 
  */
-
-//recursive solution
 
 var preorder = function(node, result) {
   if (node === null) {
@@ -29,9 +41,7 @@ var preorder = function(node, result) {
 
 var preorderTraversal = function(root) {
   let result = [];
-  
   preorder(root, result);
-  
   return result;
   
 };
